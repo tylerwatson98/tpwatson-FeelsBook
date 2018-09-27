@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">tpwatson-FeelsBook</string>
+    <string name="SurpriseCount">0</string>
+    <string name="AngerCount">0</string>
+    <string name="FearCount">0</string>
+    <string name="LoveCount">0</string>
+    <string name="SadnessCount">0</string>
+    <string name="JoyCount">0</string>
+    <string name="Browse_Past_Emotions">Browse Past Emotions</string>
+    <string name="Fear">Fear</string>
+    <string name="Anger">Anger</string>
+    <string name="Sadness">Sadness</string>
+    <string name="Surprise">Surprise</string>
+    <string name="Love">Love</string>
+    <string name="Joy">Joy</string>
+    <string name="Greeting">What are you feeling?</string>
+    <string name="return_home">Return Home</string>
+    <string name="submit_entry">Submit Entry</string>
+    <string name="optional_comment_max_100_char">Optional Comment (max 100 char)</string>
+    <string name="returnb">Return</string>
+    <string name="submit">Submit</string>
+    <string name="edit_entry">Edit Entry</string>
+</resources>
