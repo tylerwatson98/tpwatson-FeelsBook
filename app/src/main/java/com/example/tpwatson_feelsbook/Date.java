@@ -24,7 +24,7 @@ class Date implements Serializable {
     //private String comment;
 
     // Emotion constructor
-    Date(Date date){
+    Date(){
         //this.comment=comment;
         this.date = date;
     }

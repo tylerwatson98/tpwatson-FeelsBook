@@ -92,9 +92,9 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
                         Emotion emotion = el.get(fPosition);
                         //Comment comment = cl.get(fPosition);
                         // create a new intent to edit the emotion entry
-                        //String sentry=el.get(fPosition).toString();
+                        String sentry=el.get(fPosition).toString();
                         Intent intent = new Intent(BrowseEmotionsActivity.this, EditEntry.class);
-                        //intent.putExtra("entry",sentry);
+                        intent.putExtra("entry",sentry);
                         // testing new
                         Curator.getStoredEmotions().removeEmotion(emotion);
                         //Curator.getStoredEmotions().removeComment(comment);

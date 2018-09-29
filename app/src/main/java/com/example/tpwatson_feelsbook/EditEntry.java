@@ -4,9 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
+import java.util.Locale;
 
 public class EditEntry extends AppCompatActivity {
     @Override
@@ -17,11 +24,11 @@ public class EditEntry extends AppCompatActivity {
 
 
         EmotionsManager.Initialize(this.getApplicationContext());
-        Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
+        //Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
 
-        /*String sentry = getIntent().getStringExtra("entry");
+        String sentry = getIntent().getStringExtra("entry");
 
-        String[] parsed = sentry.split("--");
+        String[] parsed = sentry.split(" -- ");
         parsed[0]=parsed[0].trim();
         parsed[1]=parsed[1].trim();
         String [] parsed2=parsed[1].split("\n");
@@ -37,14 +44,14 @@ public class EditEntry extends AppCompatActivity {
         } catch (RuntimeException r){
             r.printStackTrace();
         }
-        */
+
     }
 
 
     // intent to return to emotion history window on click of return button on screen, used if user no longer wants to edit entry
     public void returnToEntries(View view) {
         Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
-        /*
+
         Curator cu = new Curator();
         TextView textView= findViewById(R.id.Eemotion);
         EditText date = findViewById(R.id.Edate);
@@ -53,7 +60,7 @@ public class EditEntry extends AppCompatActivity {
         String merge2=date.getText().toString();
         String merge3=comment.getText().toString();
         String mergeall=merge1+" -- "+merge2+"\n"+merge3;
-        //cu.addEmotion(new Emotion((mergeall)));*/
+        cu.addEmotion(new Emotion((mergeall)));
         Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
         startActivity(intent);
     }
@@ -61,7 +68,7 @@ public class EditEntry extends AppCompatActivity {
     // intent to return to the emotion history window on click of submit edited entry, used if entry is modified
     public void submitNew(View view) {
         Toast.makeText(this, "Entry Successfully Modified", Toast.LENGTH_SHORT).show();
-        /*
+
         Curator cu = new Curator();
         TextView textView= findViewById(R.id.Eemotion);
         EditText date = findViewById(R.id.Edate);
@@ -74,12 +81,11 @@ public class EditEntry extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CANADA);
         try {
             Date date1= dateFormat.parse(merge2);
-            //cu.addEmotion(new Emotion((mergeall)));
+            cu.addEmotion(new Emotion((mergeall)));
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        //cu.addEmotion(new Emotion((mergeall)));
-        */
+
         Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
         startActivity(intent);
     }

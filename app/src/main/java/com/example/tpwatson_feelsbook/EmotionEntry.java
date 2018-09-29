@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -35,7 +36,7 @@ public class EmotionEntry extends AppCompatActivity {
         edate.setText(strdate);
     }
 
-    public void Submit(View view) {
+    public void Submit(View view) throws ParseException {
         Toast.makeText(this,"Adding Entry", Toast.LENGTH_SHORT).show();
         // Call the curator and establish an object of reference
         Curator cu = new Curator();
@@ -46,11 +47,12 @@ public class EmotionEntry extends AppCompatActivity {
         String merge1=emotion.getText().toString();
         String merge2=date.getText().toString();
         String merge3=editText.getText().toString();
-        String mergeall=merge1+" - "+merge2+"\n"+merge3;
+        String mergeall=merge1+" -- "+merge2+"\n"+merge3;
 
-
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CANADA);
         Date date1 = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CANADA);
+        String strdate=dateFormat.format(date1);
+        Date date2=dateFormat.parse(strdate);
 
         // using the curators addEmotion method add the text associated with the textView object in a string format to the stored emotions
         cu.addEmotion(new Emotion(mergeall));

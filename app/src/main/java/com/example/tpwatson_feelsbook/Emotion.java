@@ -21,10 +21,12 @@ class Emotion implements Serializable{
 
     // Establish a private final String variable "emotion"
     private String emotion;
+    private Date date;
 
     // Emotion constructor
     Emotion(String emotion) {
         //this.comment=comment;
+        this.date = new Date();
         this.emotion = emotion;
     }
 
@@ -38,6 +40,14 @@ class Emotion implements Serializable{
         return getEmotion();
     }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDate(){
+        return this.date;
+    }
+
     @Override
     public boolean equals(Object o) {
         return o != null && o.getClass() == this.getClass() && this.equals((Emotion)o);
@@ -49,5 +59,4 @@ class Emotion implements Serializable{
     public int hashcode(){
         return (getEmotion()).hashCode();
     }
-
 }
