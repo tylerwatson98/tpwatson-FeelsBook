@@ -22,17 +22,13 @@ public class EditEntry extends AppCompatActivity {
         setContentView(R.layout.edit_entry);
         // reference the emotions manager to initialize it in main activity
 
-
         EmotionsManager.Initialize(this.getApplicationContext());
-        //Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
-
         String sentry = getIntent().getStringExtra("entry");
 
         String[] parsed = sentry.split(" -- ");
         parsed[0]=parsed[0].trim();
         parsed[1]=parsed[1].trim();
         String [] parsed2=parsed[1].split("\n");
-
 
         TextView emotionV = findViewById(R.id.Eemotion);
         emotionV.setText(parsed[0]);
@@ -48,45 +44,58 @@ public class EditEntry extends AppCompatActivity {
     }
 
 
+    public static boolean testDate(String date){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
+        format.setLenient(false);
+        try{
+            format.parse(date.trim());
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+
+    public String getEntry(){
+        EditText editText= findViewById(R.id.Ecomment);
+        TextView emotion= findViewById(R.id.Eemotion);
+        EditText date=findViewById(R.id.Edate);
+        return emotion.getText().toString()+" -- "+date.getText().toString()+"\n"+editText.getText().toString();
+    }
+
+
     // intent to return to emotion history window on click of return button on screen, used if user no longer wants to edit entry
     public void returnToEntries(View view) {
-        Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
+        EditText editDate = findViewById(R.id.Edate);
 
-        Curator cu = new Curator();
-        TextView textView= findViewById(R.id.Eemotion);
-        EditText date = findViewById(R.id.Edate);
-        EditText comment = findViewById(R.id.Ecomment);
-        String merge1=textView.getText().toString();
-        String merge2=date.getText().toString();
-        String merge3=comment.getText().toString();
-        String mergeall=merge1+" -- "+merge2+"\n"+merge3;
-        cu.addEmotion(new Emotion((mergeall)));
-        Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
-        startActivity(intent);
+        if (testDate(editDate.getText().toString())){
+            Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
+            Curator cu = new Curator();
+            cu.addEmotion(new Emotion((getEntry())));
+            Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
+            startActivity(intent);
+        }
+       else{
+            Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
+        }
     }
+
 
     // intent to return to the emotion history window on click of submit edited entry, used if entry is modified
     public void submitNew(View view) {
-        Toast.makeText(this, "Entry Successfully Modified", Toast.LENGTH_SHORT).show();
+        EditText editDate = findViewById(R.id.Edate);
 
-        Curator cu = new Curator();
-        TextView textView= findViewById(R.id.Eemotion);
-        EditText date = findViewById(R.id.Edate);
-        EditText comment = findViewById(R.id.Ecomment);
-        String merge1=textView.getText().toString();
-        String merge2=date.getText().toString();
-        String merge3=comment.getText().toString();
-        String mergeall=merge1+" -- "+merge2+"\n"+merge3;
-
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CANADA);
-        try {
-            Date date1= dateFormat.parse(merge2);
-            cu.addEmotion(new Emotion((mergeall)));
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if (testDate(editDate.getText().toString())){
+            Curator cu = new Curator();
+            Toast.makeText(this, "Entry Successfully Modified", Toast.LENGTH_SHORT).show();
+            cu.addEmotion(new Emotion((getEntry())));
+            Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
+            startActivity(intent);
         }
-
-        Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
-        startActivity(intent);
+        else{
+            Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
+        }
     }
+
 }
