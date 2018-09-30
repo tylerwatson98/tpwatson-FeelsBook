@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 public class BrowseEmotionsActivity extends AppCompatActivity {
     @Override
@@ -23,10 +24,18 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         // Get the list view variable via its ID and assign it to an object
         ListView listView = findViewById(R.id.emotion_list);
         // Get the stored list of emotions which have been entered by the user via the curator methods
+
+
         final Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
         //final Collection<Comment> comments = Curator.getStoredEmotions().listComments();
         // Create new array list initialized by the emotions collection object. Final indicates el variable is shared and wont be re-assigned
         final ArrayList<Emotion> el = new ArrayList<>(emotions);
+
+        Collections.sort(el,new Sort());
+
+
+
+
         //final ArrayList <Comment> cl = new ArrayList<>(comments);
         /* create array adapter providing access to stored array of emotions so they can be displayed on the specified android layout
          for the listView from the list "el". Final indicates ea variable is shared and wont be re-assigned

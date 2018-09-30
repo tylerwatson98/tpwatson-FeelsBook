@@ -13,6 +13,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 
 // implements serializable so the class can convert an instance into bytes
@@ -87,6 +88,7 @@ public class StoredEmotions implements Serializable{
     }
 
 
+/*
     void getJoyCount(){
         Collection<Emotion> emotions=  Curator.getStoredEmotions().listEmotions();
 
@@ -116,7 +118,7 @@ public class StoredEmotions implements Serializable{
         Log.d("test count joy", String.valueOf(x));
         Log.d("test count sad", String.valueOf(y));
         System.out.print(x);
-    }
+    }*/
 
 }
 

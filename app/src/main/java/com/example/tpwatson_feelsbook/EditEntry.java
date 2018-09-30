@@ -22,6 +22,7 @@ public class EditEntry extends AppCompatActivity {
         setContentView(R.layout.edit_entry);
         // reference the emotions manager to initialize it in main activity
 
+
         EmotionsManager.Initialize(this.getApplicationContext());
         String sentry = getIntent().getStringExtra("entry");
 
@@ -29,6 +30,7 @@ public class EditEntry extends AppCompatActivity {
         parsed[0]=parsed[0].trim();
         parsed[1]=parsed[1].trim();
         String [] parsed2=parsed[1].split("\n");
+
 
         TextView emotionV = findViewById(R.id.Eemotion);
         emotionV.setText(parsed[0]);
@@ -42,7 +44,6 @@ public class EditEntry extends AppCompatActivity {
         }
 
     }
-
 
     public static boolean testDate(String date){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);

@@ -5,7 +5,11 @@ Emotion class containing the emotion constructor, getters, and setters
 
 package com.example.tpwatson_feelsbook;
 
+import android.util.Log;
+
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
 
 // implements serializable so the class can convert an instance into bytes
 class Emotion implements Serializable{
@@ -26,12 +30,14 @@ class Emotion implements Serializable{
     // Emotion constructor
     Emotion(String emotion) {
         //this.comment=comment;
-        this.date = new Date();
         this.emotion = emotion;
     }
 
+    public Emotion(String entry, java.util.Date date2) {
+    }
+
     // get emotion returns the emotion
-    private String getEmotion() {
+    public String getEmotion() {
         return this.emotion;
     }
 
