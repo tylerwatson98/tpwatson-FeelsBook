@@ -1,3 +1,19 @@
+/*
+    The browse emotions class allows the user to see their entered emotions in the form of a list view. It is sorted
+    in ascending order (oldest at the top). Clicking on an emotion will bring up an alert dialog that allows the user
+    to either edit an emotion or delete it from the list of entries. Clicking out of the dialog will close it. The user can
+    return to the main screen by clicking the button at the bottom of the window.
+
+    Idea for using and implementing comparator from https://developer.android.com/reference/java/util/Comparator
+
+    Idea for implementing the alert dialog, arrayAdapter, and listview connections to the arraylist for entry positions
+    from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+
+    Idea for passing the string form of the entry via putExtra from
+    https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+ */
+
+
 package com.example.tpwatson_feelsbook;
 
 import android.content.DialogInterface;
@@ -28,6 +44,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         final Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
         // Create new array list initialized by the emotions collection object. Final indicates el variable is shared and wont be re-assigned
         final ArrayList<Emotion> el = new ArrayList<>(emotions);
+        // call the sort class to sort the ArrayList of emotions
         Collections.sort(el,new Sort());
 
         /* create array adapter providing access to stored array of emotions so they can be displayed on the specified android layout
@@ -103,6 +120,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         });
     }
 
+    // Return the user to the menu screen
     public void ReturnHome(View view) {
         // Create an intent to return to the home page upon click of the return home button (onClick in xml)
         Intent intent = new Intent(BrowseEmotionsActivity.this, MainActivity.class);

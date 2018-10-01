@@ -1,9 +1,11 @@
 
 
 /*
- The stored emotions class allows the user to both set new emotion entries and get these entries in the form of a displayed list
+ The stored emotions class allows the user to both set new emotion entries and get these entries in the form of a displayed list.
+ It also manages the updates methods for altering the stored emotions based off of user actions.
+ Idea for making the emotion serializable from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+ Additionally, idea for update features from Abram Hindle's youtube tutorial "Student Picker for android" Saga
  */
-
 
 package com.example.tpwatson_feelsbook;
 
@@ -15,11 +17,11 @@ import java.util.Collection;
 // Implements serializable so the class can convert an instance into bytes
 class StoredEmotions implements Serializable {
 
-    // Initiate the ArrayLists for the emotion entries and updates. Set the updates arraylist as transient so it will not be serializeable;
+    // Initialize the ArrayLists for the emotion entries and updates. Set the updates arraylist as transient so it will not be serializeable;
     private final ArrayList<Emotion> emotions;
     private transient ArrayList<Update> updates;
 
-    // Construct the new Array lists and assign them to their designation objects
+    // Construct the new emotions and updates ArrayLists and assign them to their designation objects
     StoredEmotions() {
         emotions = new ArrayList<>();
         updates = new ArrayList<>();

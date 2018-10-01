@@ -1,3 +1,21 @@
+
+/*
+ The edit entry class opens when the user desires to edit an emotion entry. It allows the user to change the date as well
+ as the comment. The emotion is unchangeable.
+
+  In edit_entry.xml I learned how to wrap the comment entry so it did not scroll
+  horizontally from a comment by Bryan(user:323696) at the url
+  https://stackoverflow.com/questions/3276380/android-word-wrap-edittext-text/3286921#3286921
+
+  Idea for learning how to split and parse strings from comment by Cristian (user:244296) at url
+  https://stackoverflow.com/questions/3732790/android-split-string
+
+  Idea for getting the string form of the entry passed from the BrowseEmotions activity via getIntent and getStringExtra from
+  https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+ */
+
+
+
 package com.example.tpwatson_feelsbook;
 
 import android.content.Intent;
@@ -7,8 +25,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -18,10 +34,9 @@ public class EditEntry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_entry);
-        // reference the emotions manager to initialize it in main activity
-
-
+        // reference the emotions manager to initialize it in this activity
         EmotionsManager.Initialize(this.getApplicationContext());
+        // get the string intent passed from browse emotions activity which will contain the emotion entry in string format
         String sentry = getIntent().getStringExtra("entry");
 
         String[] parsed = sentry.split(" -- ");

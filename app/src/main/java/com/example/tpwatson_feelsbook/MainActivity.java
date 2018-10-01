@@ -2,6 +2,13 @@
 tpwatson-feelsbook: Store emotion entries created by the user
  */
 
+
+
+/*
+    Idea for passing the string form of the entry via putExtra from
+    https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+ */
+
 package com.example.tpwatson_feelsbook;
 
 import android.annotation.SuppressLint;
@@ -90,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
             // in the case of the joy button being clicked
 
             case R.id.joybutton:
-                // increment the joy count, save value to the counts manager, assign textview from joy count id, and set the new value of joy count via set text
                 // the clicking of this button creates a new intent which takes the user to the emotion entry activity
                 Intent intent = new Intent(MainActivity.this, EmotionEntry.class);
                 // pass the joy value designated to the button to the emotion entry activity via its key "message"

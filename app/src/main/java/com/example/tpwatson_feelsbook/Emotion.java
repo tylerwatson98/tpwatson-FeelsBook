@@ -1,6 +1,8 @@
 
 /*
-Emotion class containing the emotion constructor, getters, and setters
+Emotion class containing the emotion constructor, getters, setters, and a method to convert the emotion to a string.
+This class will implement serializable so it can convert the emotion string instances to bytes for storage purposes.
+Idea for making the emotion serializable from Abram Hindle's youtube tutorial "Student Picker for android" Saga
  */
 
 package com.example.tpwatson_feelsbook;
@@ -9,8 +11,6 @@ import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 
-
-// implements serializable so the class can convert an instance into bytes
 class Emotion implements Serializable{
     // Establish a private final String variable "emotion" to prevent other classes from instantiating it
     private final String emotion;
