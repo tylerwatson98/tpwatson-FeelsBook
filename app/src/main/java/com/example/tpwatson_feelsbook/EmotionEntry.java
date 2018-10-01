@@ -11,14 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class EmotionEntry extends AppCompatActivity {
 
-    public String initial_entry;
+    private String initial_entry;
 
 
     @Override
@@ -31,41 +30,32 @@ public class EmotionEntry extends AppCompatActivity {
         String emotion=intent.getStringExtra("emotion");
         TextView tv = findViewById(R.id.current_emotion);
         EditText editText= findViewById(R.id.optional_comment);
+        TextView edate=findViewById(R.id.datetime);
         // set the textView's character sequence to the value passed into the activity
         tv.setText(emotion);
 
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         String strdate=dateFormat.format(date);
-        TextView edate=findViewById(R.id.datetime);
         edate.setText(strdate);
 
         initial_entry=tv.getText().toString()+" -- "+edate.getText().toString()+"\n"+editText.getText().toString();
     }
 
-    public String getEntry(){
+    private String getEntry(){
         EditText editText= findViewById(R.id.optional_comment);
-        // assign the textview object the element via its id "current_emotion"
         TextView emotion= findViewById(R.id.current_emotion);
         TextView date=findViewById(R.id.datetime);
         return emotion.getText().toString()+" -- "+date.getText().toString()+"\n"+editText.getText().toString();
     }
 
-    public void Submit(View view) throws ParseException {
+    public void Submit(View view){
         Toast.makeText(this,"Adding Entry", Toast.LENGTH_SHORT).show();
         // Call the curator and establish an object of reference
         Curator cu = new Curator();
 
-        Date date1 = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.CANADA);
-        String strdate=dateFormat.format(date1);
-        Date date2=dateFormat.parse(strdate);
-
-        // using the curators addEmotion method add the text associated with the textView object in a string format to the stored emotions
+        // using the curators addEmotion method add the merged strings to the stored emotions
         cu.addEmotion(new Emotion(getEntry()));
-        //cu.addComment(new Comment(merge3));
-
-        Toast.makeText(this,"Submitting", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(EmotionEntry.this, MainActivity.class);
         startActivity(intent);
     }
@@ -92,6 +82,7 @@ public class EmotionEntry extends AppCompatActivity {
             });
             ab.show();
         }
+
         else{
             Toast.makeText(this,"Returning Home", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(EmotionEntry.this, MainActivity.class);

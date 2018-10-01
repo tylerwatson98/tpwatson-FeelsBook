@@ -8,11 +8,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
 import java.util.Locale;
 
 public class EditEntry extends AppCompatActivity {
@@ -45,7 +43,7 @@ public class EditEntry extends AppCompatActivity {
 
     }
 
-    public static boolean testDate(String date){
+    private static boolean testDate(String date){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         format.setLenient(false);
         try{
@@ -58,7 +56,7 @@ public class EditEntry extends AppCompatActivity {
     }
 
 
-    public String getEntry(){
+    private String getEntry(){
         EditText editText= findViewById(R.id.Ecomment);
         TextView emotion= findViewById(R.id.Eemotion);
         EditText date=findViewById(R.id.Edate);

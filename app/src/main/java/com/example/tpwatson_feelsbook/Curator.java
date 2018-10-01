@@ -9,20 +9,18 @@ class Curator {
     // create a singleton for StoredEmotions
     private static StoredEmotions storedEmotions = null;
 
-    // if the storedEmotions are null then try making a new
-    static public StoredEmotions getStoredEmotions() {
+    // if the storedEmotions are null then make a new set
+    static StoredEmotions getStoredEmotions() {
         // if there is no instance of a storedEmotions transfer to a try and catch system
         if (storedEmotions == null) {
             try {
-                // create storedEmotions on instance of it not first existing
+                // establish connection to the storedEmotions variable and add new emotions then perform updates
                 storedEmotions = EmotionsManager.getManager().loadEmotion();
-                storedEmotions = EmotionsManager.getManager().loadComment();
-                // on updates update the storedEmotions so they automatically save
                 storedEmotions.addUpdate(new Update() {
                     @Override
+                    // save emotion to the list of stored emotions
                     public void update() {
-                        saveE();
-                        saveC();
+                        saveEmotion();
                     }
                 });
                 // catch any io exceptions and print them to stack trace to visualize exception
@@ -30,36 +28,22 @@ class Curator {
                 e.printStackTrace();
             }
         }
-        // return the storeEmotions
+        // return the storedEmotions
         return storedEmotions;
     }
 
-    private static void saveE() {
+    private static void saveEmotion() {
         try {
-            EmotionsManager.getManager().saveE(getStoredEmotions());
-            // catch any io exceptions and print them to stack trace to visualize exception
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    private static void saveC() {
-        try {
-            EmotionsManager.getManager().saveC(getStoredEmotions());
+            EmotionsManager.getManager().saveEmotions(getStoredEmotions());
             // catch any io exceptions and print them to stack trace to visualize exception
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void addEmotion (Emotion emotion){
+    void addEmotion(Emotion emotion){
         // Get the stored emotions and add the emotion passed in the parameter
         getStoredEmotions().addEmotion(emotion);
     }
-
-    public void addComment (Comment comment){
-        // Get the stored comments and add the emotion passed in the parameter
-        getStoredEmotions().addComment(comment);
-    }
-
 
 }

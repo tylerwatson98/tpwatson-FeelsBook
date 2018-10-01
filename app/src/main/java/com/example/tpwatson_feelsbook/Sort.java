@@ -1,14 +1,12 @@
 package com.example.tpwatson_feelsbook;
 
-import android.util.Log;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
-public class Sort implements Comparator<Emotion> {
+class Sort implements Comparator<Emotion> {
 
     public int compare(Emotion e1, Emotion e2) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);

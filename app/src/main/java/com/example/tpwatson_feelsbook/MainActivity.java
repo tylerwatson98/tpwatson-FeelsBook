@@ -18,16 +18,9 @@ import java.util.Collection;
 public class MainActivity extends AppCompatActivity {
 
     // declaration of count variables and initiation of their default 0 values
-    private int joyCount =0;
-    private int sadCount = 0;
-    private int angCount = 0;
-    private int lovCount = 0;
-    private int feaCount = 0;
-    private int surCount = 0;
+    private int joyCount,sadCount,angCount,lovCount,feaCount,surCount =0;
 
 
-    //
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +28,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // reference the emotions manager to initialize it in main activity
         EmotionsManager.Initialize(this.getApplicationContext());
+        Counts();
+    }
 
+    @SuppressLint("SetTextI18n")
+    private void Counts(){
         Collection<Emotion> emotions=  Curator.getStoredEmotions().listEmotions();
         String test=String.valueOf(emotions);
         String[] count=test.split(",");
@@ -72,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
         textsurprise.setText(Integer.toString(surCount));
         TextView textanger = findViewById(R.id.angercount);
         textanger.setText(Integer.toString(angCount));
-    }
 
+    }
 
     // Method containing the new intent which will bring user to the browse emotions activity and layout screen
     public void BrowseEmotions(View view) {

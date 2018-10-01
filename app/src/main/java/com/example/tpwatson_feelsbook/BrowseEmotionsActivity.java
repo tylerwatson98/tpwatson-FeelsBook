@@ -23,20 +23,13 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         EmotionsManager.Initialize(this.getApplicationContext());
         // Get the list view variable via its ID and assign it to an object
         ListView listView = findViewById(R.id.emotion_list);
-        // Get the stored list of emotions which have been entered by the user via the curator methods
-
+        // Get the stored list of users emotions entered via calls to curator methods
 
         final Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
-        //final Collection<Comment> comments = Curator.getStoredEmotions().listComments();
         // Create new array list initialized by the emotions collection object. Final indicates el variable is shared and wont be re-assigned
         final ArrayList<Emotion> el = new ArrayList<>(emotions);
-
         Collections.sort(el,new Sort());
 
-
-
-
-        //final ArrayList <Comment> cl = new ArrayList<>(comments);
         /* create array adapter providing access to stored array of emotions so they can be displayed on the specified android layout
          for the listView from the list "el". Final indicates ea variable is shared and wont be re-assigned
           */
@@ -52,17 +45,13 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
             @Override
             // Upon changes to the stored emotions update the display according the list changes and mark those changes
             public void update() {
-                // first clear the list display
-                //cl.clear();
+                // clear the list display
                 el.clear();
                 // get the stored emotions collection
                 Collection<Emotion> emotions=  Curator.getStoredEmotions().listEmotions();
-                Collection<Comment> comments = Curator.getStoredEmotions().listComments();
                 // add the stored emotions back to the list display
-               // cl.addAll(comments);
                 el.addAll(emotions);
                 // mark the updates to the stored emotions to show changed data
-                //ca.notifyDataSetChanged();
                 ea.notifyDataSetChanged();
             }
         });
@@ -86,7 +75,6 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // get the position of the emotion selected from in the listView
                         Emotion emotion = el.get(fPosition);
-                        //Comment comment = cl.get(fPosition);
                         // remove that emotion from the listView of stored emotions
                         Curator.getStoredEmotions().removeEmotion(emotion);
                         //Curator.getStoredEmotions().removeComment(comment);
@@ -99,14 +87,12 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // get the emotion at position of click
                         Emotion emotion = el.get(fPosition);
-                        //Comment comment = cl.get(fPosition);
                         // create a new intent to edit the emotion entry
                         String sentry=el.get(fPosition).toString();
                         Intent intent = new Intent(BrowseEmotionsActivity.this, EditEntry.class);
                         intent.putExtra("entry",sentry);
                         // testing new
                         Curator.getStoredEmotions().removeEmotion(emotion);
-                        //Curator.getStoredEmotions().removeComment(comment);
                         startActivity(intent);
                         }
                     });

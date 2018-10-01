@@ -16,14 +16,13 @@ Emotions manager mainly focuses on making the emotion data of the feels app pers
 even upon its closing. The app utilizes shared preferences to do so.
  */
 
-public class EmotionsManager {
+class EmotionsManager {
 
     // create the general file to store the emotion data
     private static final String Emo="Emotions";
     // create the key file to store the emotion data
     private static final String emo="emotions";
     // initialize a context to access
-    private static final String com="comments";
     private final Context context;
 
 
@@ -37,7 +36,7 @@ public class EmotionsManager {
     }
 
     // initialize the emotions manager
-    public static void Initialize(Context context) {
+    static void Initialize(Context context) {
         // use if to check if emotions manager has been initialized and if not also check if the context is also uninitialized
         if (emotionsManager == null) {
             if(context==null) {
@@ -49,7 +48,7 @@ public class EmotionsManager {
     }
 
     // method to get the emotions manager at any time
-    public static EmotionsManager getManager(){
+    static EmotionsManager getManager(){
         // use if to check if emotions manager has been initialized, throw a runtime exception if not
         if(emotionsManager==null){
                 throw new RuntimeException("Emotions Manager not initialized");
@@ -58,7 +57,7 @@ public class EmotionsManager {
     }
 
     // load an emotion from shared preferences
-    public StoredEmotions loadEmotion() throws IOException {
+    StoredEmotions loadEmotion() throws IOException {
         // get the shared preferences settings for the Emo file set to private mode via 0
         SharedPreferences settings = context.getSharedPreferences(Emo,0);
         // get settings
@@ -106,39 +105,13 @@ public class EmotionsManager {
     }
 
     // save stored emotions
-    public void saveE(StoredEmotions se) throws IOException{
+    void saveEmotions(StoredEmotions se) throws IOException{
         // get the shared preferences settings for the Emo file set to private mode via 0
         SharedPreferences settings=context.getSharedPreferences(Emo,0);
         //  get an editor from the preference to allow us to edit stored entries in the storedEmotions
         SharedPreferences.Editor ed =settings.edit();
         // put the stored emotions into the key file after converting them to a string
         ed.putString(emo,toString(se));
-        // apply the modifications to the shared preferences editor
-        ed.apply();
-    }
-
-    public StoredEmotions loadComment() throws IOException {
-        // get the shared preferences settings for the Emo file set to private mode via 0
-        SharedPreferences settings = context.getSharedPreferences(Emo,0);
-        // get settings
-        String storedEmotions=settings.getString(com,"");
-        // if the stored emotions are empty create a new storeEmotions item
-        if(storedEmotions.equals("")){
-            return new StoredEmotions();
-        }
-        else {
-            // return the emotion from storedEmotions
-            return fromString(storedEmotions);
-        }
-    }
-
-    public void saveC(StoredEmotions se) throws IOException{
-        // get the shared preferences settings for the Emo file set to private mode via 0
-        SharedPreferences settings=context.getSharedPreferences(Emo,0);
-        //  get an editor from the preference to allow us to edit stored entries in the storedEmotions
-        SharedPreferences.Editor ed =settings.edit();
-        // put the stored emotions into the key file after converting them to a string
-        ed.putString(com,toString(se));
         // apply the modifications to the shared preferences editor
         ed.apply();
     }
