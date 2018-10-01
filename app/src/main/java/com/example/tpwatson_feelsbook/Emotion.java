@@ -31,6 +31,7 @@ class Emotion implements Serializable{
         return getEmotion();
     }
 
+    /*
     @Override
     public boolean equals(Object o) {
         return o != null && o.getClass() == this.getClass() && this.equals((Emotion)o);
@@ -38,6 +39,6 @@ class Emotion implements Serializable{
 
     private boolean equals(Emotion e) {
         return e != null && getEmotion().equals(e.getEmotion());
-    }
+    }*/
 
 }

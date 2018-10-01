@@ -55,14 +55,12 @@ public class EditEntry extends AppCompatActivity {
         return true;
     }
 
-
     private String getEntry(){
         EditText editText= findViewById(R.id.Ecomment);
         TextView emotion= findViewById(R.id.Eemotion);
         EditText date=findViewById(R.id.Edate);
         return emotion.getText().toString()+" -- "+date.getText().toString()+"\n"+editText.getText().toString();
     }
-
 
     // intent to return to emotion history window on click of return button on screen, used if user no longer wants to edit entry
     public void returnToEntries(View view) {
@@ -79,7 +77,6 @@ public class EditEntry extends AppCompatActivity {
             Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
         }
     }
-
 
     // intent to return to the emotion history window on click of submit edited entry, used if entry is modified
     public void submitNew(View view) {
