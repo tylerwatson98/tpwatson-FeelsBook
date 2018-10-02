@@ -31,6 +31,10 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class EditEntry extends AppCompatActivity {
+
+    // create an initial entry string for comparison purposes when user tries to cancel entry
+    private String initial_entry;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +62,7 @@ public class EditEntry extends AppCompatActivity {
         } catch (RuntimeException r){
             r.printStackTrace();
         }
+        initial_entry=getEntry();
 
     }
 
@@ -89,12 +94,19 @@ public class EditEntry extends AppCompatActivity {
 
         // if the date format is correct the curator will be called so the edited entry can be added to the stored emotions
         if (testDate(editDate.getText().toString())){
-            Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
-            Curator cu = new Curator();
-            cu.addEmotion(new Emotion((getEntry())));
-            // new intent will bring the user to the browse emotions screen
-            Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
-            startActivity(intent);
+            // check if the original entry has been changed before cancelling
+            if(initial_entry.equals(getEntry())){
+                Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
+                Curator cu = new Curator();
+                cu.addEmotion(new Emotion((getEntry())));
+                // new intent will bring the user to the browse emotions screen
+                Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
+                startActivity(intent); }
+                // dis
+            else{
+                // alert user they have changed the entry and should instead submit it
+                Toast.makeText(this, "Warning. Entry changed, returning will not save changes, please submit entry", Toast.LENGTH_LONG).show();
+            }
         }
         // else if the date format is not correct alert the user
        else{
