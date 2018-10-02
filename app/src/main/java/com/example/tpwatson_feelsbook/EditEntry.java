@@ -42,16 +42,18 @@ public class EditEntry extends AppCompatActivity {
         // get the string intent passed from browse emotions activity which will contain the emotion entry in string format
         String sentry = getIntent().getStringExtra("entry");
 
+        // parse the entry string and remove spaces from it
         String[] parsed = sentry.split(" -- ");
         parsed[0]=parsed[0].trim();
         parsed[1]=parsed[1].trim();
         String [] parsed2=parsed[1].split("\n");
 
-
+        // set the emotion textview, date, and comment edit texts from the parsed string
         TextView emotionV = findViewById(R.id.Eemotion);
         emotionV.setText(parsed[0]);
         EditText editDate = findViewById(R.id.Edate);
         editDate.setText(parsed2[0]);
+        // try and catch clauses for the parse exception of the comment
         try {
             EditText editComment = findViewById(R.id.Ecomment);
             editComment.setText(parsed2[1]);
@@ -61,7 +63,9 @@ public class EditEntry extends AppCompatActivity {
 
     }
 
+    // test the date to make sure if the user changes the entries date it follows the proper date format. Returns a boolean object for whether the date is in proper format
     private static boolean testDate(String date){
+        // establish the date format and make the format non lenient, include a parse catch and try clause
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         format.setLenient(false);
         try{
@@ -73,6 +77,7 @@ public class EditEntry extends AppCompatActivity {
         return true;
     }
 
+    // combines all the elements of the entry into a single string for the new edited entry
     private String getEntry(){
         EditText editText= findViewById(R.id.Ecomment);
         TextView emotion= findViewById(R.id.Eemotion);
@@ -84,13 +89,16 @@ public class EditEntry extends AppCompatActivity {
     public void returnToEntries(View view) {
         EditText editDate = findViewById(R.id.Edate);
 
+        // if the date format is correct the curator will be called so the edited entry can be added to the stored emotions
         if (testDate(editDate.getText().toString())){
             Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
             Curator cu = new Curator();
             cu.addEmotion(new Emotion((getEntry())));
+            // new intent will bring the user to the browse emotions screen
             Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
             startActivity(intent);
         }
+        // else if the date format is not correct alert the user
        else{
             Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
         }
@@ -100,10 +108,13 @@ public class EditEntry extends AppCompatActivity {
     public void submitNew(View view) {
         EditText editDate = findViewById(R.id.Edate);
 
+
+        // if the date format is correct the curator will be called so the new edited entry can be added to the stored emotions
         if (testDate(editDate.getText().toString())){
             Curator cu = new Curator();
             Toast.makeText(this, "Entry Successfully Modified", Toast.LENGTH_SHORT).show();
             cu.addEmotion(new Emotion((getEntry())));
+            // new intent will bring the user to the browse emotions screen
             Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
             startActivity(intent);
         }

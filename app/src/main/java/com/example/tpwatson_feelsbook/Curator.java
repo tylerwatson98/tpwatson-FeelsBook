@@ -1,3 +1,12 @@
+
+/*
+ The curator class helps to perform tasks associated with adding and saving the emotions. It reduces the code in separate classes as an attempt to increase
+ cohesion. The curator utilizes methods found in the StoredEmotions class via the creation of an instance of the StoredEmotions in this class. Via getStoredEmotions
+ emotions can be loaded and updated as well as be saved.
+
+ Idea for Curator implementations from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+ */
+
 package com.example.tpwatson_feelsbook;
 
 import java.io.IOException;
@@ -9,7 +18,7 @@ class Curator {
     // create a new singleton for StoredEmotions
     private static StoredEmotions storedEmotions = null;
 
-    // gets the stored Emotions and returns type StoredEmotions class
+    // gets the stored Emotions and returns type StoredEmotions class. Performs adding updates and emotions to the stored emotions and finishes by saving
     static StoredEmotions getStoredEmotions() {
         // if there is no instance of a storedEmotions transfer to a try and catch system
         if (storedEmotions == null) {

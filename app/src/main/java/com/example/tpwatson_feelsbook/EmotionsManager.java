@@ -1,3 +1,14 @@
+
+/*
+Emotions manager mainly focuses on making the emotion data of the FeelsBook app persistent so that it remains stored in the app
+even upon its closing. The app utilizes shared preferences to do so. The class both saves and loads the emotions from the stored shared
+preferences file created using the to and from string methods byte conversions and serialization.
+
+Idea for implementing shared preferences and byte encoding and decoding from Abram Hindle's youtube tutorial "Student Picker for android" Saga and
+also https://developer.android.com/reference/android/content/SharedPreferences
+ */
+
+
 package com.example.tpwatson_feelsbook;
 
 import android.annotation.SuppressLint;
@@ -11,13 +22,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-/*
-Emotions manager mainly focuses on making the emotion data of the feels app persistent so that it remains stored in the app
-even upon its closing. The app utilizes shared preferences to do so.
- */
-
 class EmotionsManager {
-
     // create the general file to store the emotion data
     private static final String Emo="Emotions";
     // create the key file to store the emotion data
@@ -30,10 +35,12 @@ class EmotionsManager {
     // create singleton of the Emotions manager
     static private EmotionsManager emotionsManager=null;
 
+
     // Constructor setting the context of EmotionsManager
     private EmotionsManager(Context context){
         this.context=context;
     }
+
 
     // initialize the emotions manager
     static void Initialize(Context context) {
@@ -47,6 +54,7 @@ class EmotionsManager {
         emotionsManager = new EmotionsManager(context);
     }
 
+
     // method to get the emotions manager
     static EmotionsManager getManager(){
         // use if to check if emotions manager has been initialized, throw a runtime exception if not
@@ -56,7 +64,8 @@ class EmotionsManager {
         return emotionsManager;
     }
 
-    // load an emotion from shared preferences after con
+
+    // loads an emotion from shared preferences and returns type StoredEmotions
     StoredEmotions loadEmotion() throws IOException {
         // get the shared preferences settings for the Emo file set to private mode via 0
         SharedPreferences settings = context.getSharedPreferences(Emo,0);
@@ -72,7 +81,8 @@ class EmotionsManager {
         }
     }
 
-    // method converts the student list to a string object via output stream and byte conversion
+
+    // Converts the emotions to string object via output stream and byte conversion to save the emotion in a serialized format of the entry string
     private static String toString(StoredEmotions se) throws IOException{
         // create a new byte array output stream to write to a local file
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
@@ -89,7 +99,7 @@ class EmotionsManager {
     }
 
 
-    // convert a string into the storedEmotions
+    // Decodes the byte converted emotion into a string when loading out the emotions from the stored entry string
     private static StoredEmotions fromString(String storedEmotions) throws IOException{
         // create a new byte input stream with Base64 decoding to decode the serialized bites
         ByteArrayInputStream bi = new ByteArrayInputStream(Base64.decode(storedEmotions,Base64.DEFAULT));
@@ -103,6 +113,7 @@ class EmotionsManager {
         }
         return null;
     }
+
 
     // saveEmotions will save the emotion entries via the use of shared preferences key and value system
     void saveEmotions(StoredEmotions se) throws IOException{
