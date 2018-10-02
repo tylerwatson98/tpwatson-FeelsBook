@@ -1,13 +1,18 @@
 /*
 tpwatson-feelsbook: Store emotion entries created by the user
- */
 
 
+    The MainActivity will contain all the emotion buttons and the browse activity button. On the click of an emotion
+    button the user is taken to the EmotionEntry activity where they can submit the emotion with an optional comment. The
+    browse emotions button at the bottom of the screen will bring the user to the screen containing all the stored emotions.
+    This screen also displays all the emotion counts
 
-/*
-    Idea for passing the string form of the entry via putExtra from
-    https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
- */
+  Idea for learning how to split and parse strings from comment by Cristian (user:244296) at url
+  https://stackoverflow.com/questions/3732790/android-split-string
+
+  Idea for passing the string form of the entry via putExtra from
+  https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+  */
 
 package com.example.tpwatson_feelsbook;
 
@@ -24,6 +29,7 @@ import java.util.Collection;
 // extends
 public class MainActivity extends AppCompatActivity {
 
+
     // declaration of count variables and initiation of their default 0 values
     private int joyCount,sadCount,angCount,lovCount,feaCount,surCount =0;
 
@@ -35,14 +41,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // reference the emotions manager to initialize it in main activity
         EmotionsManager.Initialize(this.getApplicationContext());
+        // get the emotion counts
         Counts();
     }
 
+
+    // get the counts for each emotion and display them
     @SuppressLint("SetTextI18n")
     private void Counts(){
+        // get the collection of stored emotions via the Curator's list getter methods
         Collection<Emotion> emotions=  Curator.getStoredEmotions().listEmotions();
+        // get the entire list of emotions in the form of 1 string and split that string at the commas to separate each entry
         String test=String.valueOf(emotions);
         String[] count=test.split(",");
+        // for each of the parsed strings check if the string contains the emotion and if so increment its count
         for (String aCount : count) {
             if (aCount.contains("Joy")) {
                 joyCount++;
@@ -64,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        // set all the textviews for the clicker accounts using each counts ID and count integer
         TextView textjoy = findViewById(R.id.joycount);
         textjoy.setText(Integer.toString(joyCount));
         TextView textsad = findViewById(R.id.sadnesscount);
@@ -79,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     // Method containing the new intent which will bring user to the browse emotions activity and layout screen
     public void BrowseEmotions(View view) {
         // Display a brief message on screen upon the browse emotions button being clicked
@@ -89,8 +103,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @SuppressLint("SetTextI18n")
-    public void Increment (View view) {
+
+    // newEntry will bring the user to the edit entry activity on any button click, passing the emotion designated with each different emotion button
+    public void newEntry (View view) {
         // Switch case scenario which differentiates based on view IDs as to which button was clicked to properly initiate click sequence
         Toast.makeText(this, "New Entry", Toast.LENGTH_SHORT).show();
         switch (view.getId()) {
@@ -99,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.joybutton:
                 // the clicking of this button creates a new intent which takes the user to the emotion entry activity
                 Intent intent = new Intent(MainActivity.this, EmotionEntry.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "message"
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 intent.putExtra("emotion","Joy");
                 // start the activity
                 startActivity(intent);

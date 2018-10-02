@@ -30,7 +30,7 @@ class EmotionsManager {
     // create singleton of the Emotions manager
     static private EmotionsManager emotionsManager=null;
 
-    // Constructor setting the content of EmotionsManager
+    // Constructor setting the context of EmotionsManager
     private EmotionsManager(Context context){
         this.context=context;
     }
@@ -47,7 +47,7 @@ class EmotionsManager {
         emotionsManager = new EmotionsManager(context);
     }
 
-    // method to get the emotions manager at any time
+    // method to get the emotions manager
     static EmotionsManager getManager(){
         // use if to check if emotions manager has been initialized, throw a runtime exception if not
         if(emotionsManager==null){
@@ -56,7 +56,7 @@ class EmotionsManager {
         return emotionsManager;
     }
 
-    // load an emotion from shared preferences
+    // load an emotion from shared preferences after con
     StoredEmotions loadEmotion() throws IOException {
         // get the shared preferences settings for the Emo file set to private mode via 0
         SharedPreferences settings = context.getSharedPreferences(Emo,0);
@@ -104,7 +104,7 @@ class EmotionsManager {
         return null;
     }
 
-    // save stored emotions
+    // saveEmotions will save the emotion entries via the use of shared preferences key and value system
     void saveEmotions(StoredEmotions se) throws IOException{
         // get the shared preferences settings for the Emo file set to private mode via 0
         SharedPreferences settings=context.getSharedPreferences(Emo,0);

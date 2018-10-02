@@ -3,7 +3,9 @@
 /*
  The stored emotions class allows the user to both set new emotion entries and get these entries in the form of a displayed list.
  It also manages the updates methods for altering the stored emotions based off of user actions.
+
  Idea for making the emotion serializable from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+
  Additionally, idea for update features from Abram Hindle's youtube tutorial "Student Picker for android" Saga
  */
 
@@ -28,7 +30,7 @@ class StoredEmotions implements Serializable {
     }
 
     /*
-     Gets updates after checking if updates are null, if true it establishes a new array list
+     Gets updates after checking if updates are null(not initialized), if true it establishes a new array list
      with general parameter of "Update". Returns updates
       */
     private ArrayList<Update> getUpdates() {

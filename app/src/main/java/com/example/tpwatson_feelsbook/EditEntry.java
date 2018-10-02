@@ -1,7 +1,8 @@
 
 /*
  The edit entry class opens when the user desires to edit an emotion entry. It allows the user to change the date as well
- as the comment. The emotion is unchangeable.
+ as the comment. The emotion is unchangeable. The class will test if the date is in the correct format. Additionally the user can either
+ submit an emotion or stop their wish to edit the entry.
 
   In edit_entry.xml I learned how to wrap the comment entry so it did not scroll
   horizontally from a comment by Bryan(user:323696) at the url
@@ -12,9 +13,11 @@
 
   Idea for getting the string form of the entry passed from the BrowseEmotions activity via getIntent and getStringExtra from
   https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+
+  Idea for implementing the code within the testDate method from the tutorial at the following url http://www.java2s.com/Tutorial/Java/0120__Development/CheckifaStringisavaliddate.htm
+
+  Knowledge for date format from https://developer.android.com/reference/java/text/SimpleDateFormat
  */
-
-
 
 package com.example.tpwatson_feelsbook;
 
