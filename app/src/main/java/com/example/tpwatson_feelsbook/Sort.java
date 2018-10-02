@@ -2,12 +2,11 @@
     The sort class will compare the dates of two emotion entries at a time in order to sort them in ascending order based off of the returned values.
     Its single message is created with the ability to catch exceptions which occur during parsing
 
-    Idea for which values to return from the compare method from RHSeeger (user:26816) url: https://stackoverflow.com/questions/6478515/return-type-from-a-comparator
+    Idea for which values to return from the compare method from *RHSeeger (user:26816), https://stackoverflow.com/questions/6478515/return-type-from-a-comparator, 2011/06/25, viewed 2018/09/28*
 
-    Idea for using and implementing comparator from https://developer.android.com/reference/java/util/Comparator
+    Idea for using and implementing comparator from *https://developer.android.com/reference/java/util/Comparator, 2018/07/06, viewed 2018/09/28*
 
-    Idea for learning how to split and parse strings from comment by Cristian (user:244296) at url
-    https://stackoverflow.com/questions/3732790/android-split-string
+    Idea for learning how to split and parse strings from comment by *Cristian (user:244296), https://stackoverflow.com/questions/3732790/android-split-string, 2010/09/17, viewed 2018/09/28*
  */
 
 

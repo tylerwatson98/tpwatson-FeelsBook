@@ -4,8 +4,8 @@ Emotions manager mainly focuses on making the emotion data of the FeelsBook app 
 even upon its closing. The app utilizes shared preferences to do so. The class both saves and loads the emotions from the stored shared
 preferences file created using the to and from string methods byte conversions and serialization.
 
-Idea for implementing shared preferences and byte encoding and decoding from Abram Hindle's youtube tutorial "Student Picker for android" Saga and
-also https://developer.android.com/reference/android/content/SharedPreferences
+Idea for implementing shared preferences and byte encoding and decoding from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
+also *https://developer.android.com/reference/java/util/Comparator, 2018/07/06, viewed 2018/09/28*
  */
 
 

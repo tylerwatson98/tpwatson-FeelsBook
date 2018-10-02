@@ -7,11 +7,10 @@ tpwatson-feelsbook: Store emotion entries created by the user
     browse emotions button at the bottom of the screen will bring the user to the screen containing all the stored emotions.
     This screen also displays all the emotion counts
 
-  Idea for learning how to split and parse strings from comment by Cristian (user:244296) at url
-  https://stackoverflow.com/questions/3732790/android-split-string
+  Idea for learning how to split and parse strings from comment by *Cristian (user:244296), https://stackoverflow.com/questions/3732790/android-split-string, 2010/09/17, viewed 2018/09/28*
 
   Idea for passing the string form of the entry via putExtra from
-  https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+  *https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable), 2018/07/02, viewed 2018/09/21*
   */
 
 package com.example.tpwatson_feelsbook;

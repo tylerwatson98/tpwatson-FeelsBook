@@ -4,7 +4,7 @@
  cohesion. The curator utilizes methods found in the StoredEmotions class via the creation of an instance of the StoredEmotions in this class. Via getStoredEmotions
  emotions can be loaded and updated as well as be saved.
 
- Idea for Curator implementations from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+ Idea for Curator implementations from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
  */
 
 package com.example.tpwatson_feelsbook;

@@ -5,7 +5,7 @@ This class will implement serializable so it can convert the emotion string inst
 The emotion class provides the initial creation for the emotion entry objects that will added to the stored emotions and
 saved using methods within the curator class. The Emotions manager class will handle saving these emotions in shared preferences.
 
-Idea for making the emotion serializable from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+Idea for making the emotion serializable from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
  */
 
 package com.example.tpwatson_feelsbook;

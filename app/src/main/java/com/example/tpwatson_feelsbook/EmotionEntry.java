@@ -6,15 +6,14 @@
   to the menu screen.
 
   In emotion_entry.xml I learned how to wrap the comment entry so it did not scroll
-  horizontally from a comment by Bryan(user:323696) at the url
-  https://stackoverflow.com/questions/3276380/android-word-wrap-edittext-text/3286921#3286921
+  horizontally from a comment by Bryan(user:323696), https://stackoverflow.com/questions/3276380/android-word-wrap-edittext-text/3286921#3286921, 2010/07/20, viewed 2018/09/21*
 
-  Idea for alert dialog creation from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+  Idea for alert dialog creation from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
 
   Idea for getting the string form of the entry passed from the MainActivity via getIntent and getStringExtra from
-  https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+  *https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable), 2018/07/02, viewed 2018/09/21*
 
-  Knowledge for date format from https://developer.android.com/reference/java/text/SimpleDateFormat
+  Knowledge for date format from *https://developer.android.com/reference/java/text/SimpleDateFormat, 2018/06/06, viewed 2018/09/25*
  */
 
 

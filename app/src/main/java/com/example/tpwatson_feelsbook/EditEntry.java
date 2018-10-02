@@ -5,18 +5,16 @@
  submit an emotion or stop their wish to edit the entry.
 
   In edit_entry.xml I learned how to wrap the comment entry so it did not scroll
-  horizontally from a comment by Bryan(user:323696) at the url
-  https://stackoverflow.com/questions/3276380/android-word-wrap-edittext-text/3286921#3286921
+  horizontally from a comment by *Bryan (user:323696), https://stackoverflow.com/questions/3276380/android-word-wrap-edittext-text/3286921#3286921, 2010/07/20, viewed 2018/09/21*
 
-  Idea for learning how to split and parse strings from comment by Cristian (user:244296) at url
-  https://stackoverflow.com/questions/3732790/android-split-string
+  Idea for learning how to split and parse strings from comment by *Cristian (user:244296), https://stackoverflow.com/questions/3732790/android-split-string, 2010/09/17, viewed 2018/09/28*
 
   Idea for getting the string form of the entry passed from the BrowseEmotions activity via getIntent and getStringExtra from
-  https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+  *https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable), 2018/07/02, viewed 2018/09/21*
 
-  Idea for implementing the code within the testDate method from the tutorial at the following url http://www.java2s.com/Tutorial/Java/0120__Development/CheckifaStringisavaliddate.htm
+  Idea for implementing the code within the testDate method from the tutorial at *http://www.java2s.com/Tutorial/Java/0120__Development/CheckifaStringisavaliddate.htm, viewed 2018/09/27*
 
-  Knowledge for date format from https://developer.android.com/reference/java/text/SimpleDateFormat
+  Knowledge for date format from *https://developer.android.com/reference/java/text/SimpleDateFormat, 2018/06/06, viewed 2018/09/25*
  */
 
 package com.example.tpwatson_feelsbook;

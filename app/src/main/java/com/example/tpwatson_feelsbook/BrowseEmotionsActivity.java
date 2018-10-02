@@ -7,10 +7,10 @@
     Idea for using and implementing comparator from https://developer.android.com/reference/java/util/Comparator
 
     Idea for implementing the alert dialog, arrayAdapter, and listview connections to the arraylist for entry positions
-    from Abram Hindle's youtube tutorial "Student Picker for android" Saga
+    from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
 
     Idea for passing the string form of the entry via putExtra from
-    https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable)
+    https://developer.android.com/reference/android/content/Intent#putExtra(java.lang.String,%20android.os.Parcelable), 2018/07/02, viewed 2018/09/21
  */
 
 
@@ -46,6 +46,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         final ArrayList<Emotion> el = new ArrayList<>(emotions);
         // call the sort class to sort the ArrayList of emotions
         Collections.sort(el,new Sort());
+        //Curator.getStoredEmotions().addUpdate();
 
         /* create array adapter providing access to stored array of emotions so they can be displayed on the specified android layout
          for the listView from the list "el". Final indicates ea variable is shared and wont be re-assigned
@@ -62,6 +63,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
             @Override
             // Upon changes to the stored emotions update the display according the list changes and mark those changes
             public void update() {
+                Collections.sort(el,new Sort());
                 // clear the list display
                 el.clear();
                 // get the stored emotions collection
@@ -94,7 +96,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
                         Emotion emotion = el.get(fPosition);
                         // remove that emotion from the listView of stored emotions
                         Curator.getStoredEmotions().removeEmotion(emotion);
-                        //Curator.getStoredEmotions().removeComment(comment);
+                        Collections.sort(el,new Sort());
                     }
                 });
 
