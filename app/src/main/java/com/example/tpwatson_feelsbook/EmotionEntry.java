@@ -38,6 +38,7 @@ public class EmotionEntry extends AppCompatActivity {
 
     // create an initial entry string for comparison purposes when user tries to cancel entry
     private String initial_entry;
+    private Emotion e;
 
 
     @Override
@@ -66,6 +67,11 @@ public class EmotionEntry extends AppCompatActivity {
         edate.setText(strdate);
         // merge the emotion, date, and comment into a single entry which will later be user to compare changes
         initial_entry=tv.getText().toString()+" -- "+edate.getText().toString()+"\n"+editText.getText().toString();
+
+        // add new emotion after 1 click
+        e=new Emotion(initial_entry);
+        Curator cu= new Curator();
+        cu.addEmotion(e);
     }
 
     // getEntry merges all the elements of an entry on the screen and returns it as a string
@@ -83,6 +89,9 @@ public class EmotionEntry extends AppCompatActivity {
         Toast.makeText(this,"Adding Entry", Toast.LENGTH_SHORT).show();
         // Call the curator and establish an object of reference
         Curator cu = new Curator();
+        // remove the emotion we added and add a new one with a possible comment a few lines down
+        Curator.getStoredEmotions().removeEmotion(e);
+
 
         // using the curators addEmotion method add the merged strings to the stored emotions
         cu.addEmotion(new Emotion(getEntry()));
@@ -104,6 +113,8 @@ public class EmotionEntry extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     // launch an intent to return to the home screen
+                    // remove the emotion we added in on create
+                    Curator.getStoredEmotions().removeEmotion(e);
                     Intent intent = new Intent(EmotionEntry.this, MainActivity.class);
                     startActivity(intent);
                 }
@@ -122,6 +133,8 @@ public class EmotionEntry extends AppCompatActivity {
         // if the initial entry has not been changed the user will be returned to MainActivity via a new intent
         else{
             Toast.makeText(this,"Returning Home", Toast.LENGTH_SHORT).show();
+            // remove the emotion we added in on create
+            Curator.getStoredEmotions().removeEmotion(e);
             Intent intent = new Intent(EmotionEntry.this, MainActivity.class);
             startActivity(intent);
         }
