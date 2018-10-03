@@ -1,0 +1,172 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d84eaf726b8f74db81a80810f9364fc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\019a274ef024f4faf64de3a2e964edcd\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\a60bf281a03df67f2ce33690a8f0502c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\324ef9497a63eb45d8772badc3a42e55\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7a6e0674f57f7f0ce32dd1c6ba733b53\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\70af7f07ece64fce440792a2579f722c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\40ec19ebc524fee0ab93897b176fcc04\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1bb8b1d9b94ddadaa3a8ca25fb20f44b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0f15991e6e65ff3f9c513d22592b4ed4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e2c05fa407d0b21572ea754e1a168b25\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2f08fedc3e1341b13af9292510f8d4ae\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\748664a3e11b841d3d4dc1a4243402e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1fdfdbcab15ce23cccd310a10ece692f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b309cfa43783f1e33874af4936d5a112\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\55e938c9a1f5d42b244413ee990194d3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\6e1dfc4e16228685c6114f22f6c5f0e2\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\6c8882f3e01b21a9520382abda8b7b4e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9991baf002479eba983ec3d64336f98\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7656e33d5317f977f7ef47168526e8d8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d279af040a56b065bfb88f5738ea8ead\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\754e1bb0d7df950840cdabfb24ed59cf\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8b0b293ee48ad0bfb3adc9098ddecf8e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\0aec5f4c14eafb3729adcc0ed4cc0ca1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\7887a0a1e8deb714a95881d356ca86f1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\583454064ae66b09a0e6a07af439ec95\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\2ce0efa7e1bb6f3c5d945bb116c067e0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:4:5-45
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:6:5-25:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\019a274ef024f4faf64de3a2e964edcd\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\019a274ef024f4faf64de3a2e964edcd\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\6e1dfc4e16228685c6114f22f6c5f0e2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\6e1dfc4e16228685c6114f22f6c5f0e2\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:9:9-41
+	android:fullBackupContent
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:13:9-59
+	tools:ignore
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:14:9-48
+	android:roundIcon
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:10:9-54
+	android:icon
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:12:9-40
+activity#com.example.tpwatson_feelsbook.MainActivity
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:15:9-21:20
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:15:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.example.tpwatson_feelsbook.BrowseEmotionsActivity
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:22:9-60
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:22:19-57
+activity#com.example.tpwatson_feelsbook.EmotionEntry
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:23:9-50
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:23:19-47
+activity#com.example.tpwatson_feelsbook.EditEntry
+ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:24:9-47
+	android:name
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml:24:19-44
+uses-sdk
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d84eaf726b8f74db81a80810f9364fc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\9d84eaf726b8f74db81a80810f9364fc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\019a274ef024f4faf64de3a2e964edcd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\019a274ef024f4faf64de3a2e964edcd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\a60bf281a03df67f2ce33690a8f0502c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\a60bf281a03df67f2ce33690a8f0502c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\324ef9497a63eb45d8772badc3a42e55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\324ef9497a63eb45d8772badc3a42e55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7a6e0674f57f7f0ce32dd1c6ba733b53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\7a6e0674f57f7f0ce32dd1c6ba733b53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\70af7f07ece64fce440792a2579f722c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\70af7f07ece64fce440792a2579f722c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\40ec19ebc524fee0ab93897b176fcc04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\40ec19ebc524fee0ab93897b176fcc04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1bb8b1d9b94ddadaa3a8ca25fb20f44b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1bb8b1d9b94ddadaa3a8ca25fb20f44b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0f15991e6e65ff3f9c513d22592b4ed4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0f15991e6e65ff3f9c513d22592b4ed4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e2c05fa407d0b21572ea754e1a168b25\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e2c05fa407d0b21572ea754e1a168b25\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2f08fedc3e1341b13af9292510f8d4ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2f08fedc3e1341b13af9292510f8d4ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\748664a3e11b841d3d4dc1a4243402e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\748664a3e11b841d3d4dc1a4243402e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1fdfdbcab15ce23cccd310a10ece692f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1fdfdbcab15ce23cccd310a10ece692f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b309cfa43783f1e33874af4936d5a112\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b309cfa43783f1e33874af4936d5a112\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\55e938c9a1f5d42b244413ee990194d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\55e938c9a1f5d42b244413ee990194d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\94ec81823e03f6de95acea572fb60160\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\6e1dfc4e16228685c6114f22f6c5f0e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\6e1dfc4e16228685c6114f22f6c5f0e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\6c8882f3e01b21a9520382abda8b7b4e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\6c8882f3e01b21a9520382abda8b7b4e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9991baf002479eba983ec3d64336f98\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9991baf002479eba983ec3d64336f98\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7656e33d5317f977f7ef47168526e8d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7656e33d5317f977f7ef47168526e8d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d279af040a56b065bfb88f5738ea8ead\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\d279af040a56b065bfb88f5738ea8ead\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\754e1bb0d7df950840cdabfb24ed59cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\754e1bb0d7df950840cdabfb24ed59cf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8b0b293ee48ad0bfb3adc9098ddecf8e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\8b0b293ee48ad0bfb3adc9098ddecf8e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\0aec5f4c14eafb3729adcc0ed4cc0ca1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\0aec5f4c14eafb3729adcc0ed4cc0ca1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\7887a0a1e8deb714a95881d356ca86f1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\7887a0a1e8deb714a95881d356ca86f1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\583454064ae66b09a0e6a07af439ec95\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\583454064ae66b09a0e6a07af439ec95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\2ce0efa7e1bb6f3c5d945bb116c067e0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\tyler\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\2ce0efa7e1bb6f3c5d945bb116c067e0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\src\main\AndroidManifest.xml
