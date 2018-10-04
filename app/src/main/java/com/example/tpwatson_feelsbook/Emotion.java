@@ -14,7 +14,7 @@ import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 
-class Emotion implements Serializable{
+class Emotion implements Serializable {
     // Establish a private final String variable "emotion" to prevent other classes from instantiating it
     private final String emotion;
 

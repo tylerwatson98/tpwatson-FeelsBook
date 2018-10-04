@@ -24,21 +24,21 @@ import java.io.ObjectOutputStream;
 
 class EmotionsManager {
     // create the general file to store the emotion data
-    private static final String Emo="Emotions";
+    private static final String Emo = "Emotions";
     // create the key file to store the emotion data
-    private static final String emo="emotions";
+    private static final String emo = "emotions";
     // initialize a context to access
     private final Context context;
 
 
     @SuppressLint("StaticFieldLeak")
     // create singleton of the Emotions manager
-    static private EmotionsManager emotionsManager=null;
+    static private EmotionsManager emotionsManager = null;
 
 
     // Constructor setting the context of EmotionsManager
-    private EmotionsManager(Context context){
-        this.context=context;
+    private EmotionsManager(Context context) {
+        this.context = context;
     }
 
 
@@ -46,7 +46,7 @@ class EmotionsManager {
     static void Initialize(Context context) {
         // use if to check if emotions manager has been initialized and if not also check if the context is also uninitialized
         if (emotionsManager == null) {
-            if(context==null) {
+            if (context == null) {
                 // throw a new runtime exception
                 throw new RuntimeException("Missing context");
             }
@@ -56,10 +56,10 @@ class EmotionsManager {
 
 
     // method to get the emotions manager
-    static EmotionsManager getManager(){
+    static EmotionsManager getManager() {
         // use if to check if emotions manager has been initialized, throw a runtime exception if not
-        if(emotionsManager==null){
-                throw new RuntimeException("Emotions Manager not initialized");
+        if (emotionsManager == null) {
+            throw new RuntimeException("Emotions Manager not initialized");
         }
         return emotionsManager;
     }
@@ -68,14 +68,13 @@ class EmotionsManager {
     // loads an emotion from shared preferences and returns type StoredEmotions
     StoredEmotions loadEmotion() throws IOException {
         // get the shared preferences settings for the Emo file set to private mode via 0
-        SharedPreferences settings = context.getSharedPreferences(Emo,0);
+        SharedPreferences settings = context.getSharedPreferences(Emo, 0);
         // get settings
-        String storedEmotions=settings.getString(emo,"");
+        String storedEmotions = settings.getString(emo, "");
         // if the stored emotions are empty create a new storeEmotions item
-        if(storedEmotions.equals("")){
+        if (storedEmotions.equals("")) {
             return new StoredEmotions();
-        }
-        else {
+        } else {
             // return the emotion from storedEmotions
             return fromString(storedEmotions);
         }
@@ -83,7 +82,7 @@ class EmotionsManager {
 
 
     // Converts the emotions to string object via output stream and byte conversion to save the emotion in a serialized format of the entry string
-    private static String toString(StoredEmotions se) throws IOException{
+    private static String toString(StoredEmotions se) throws IOException {
         // create a new byte array output stream to write to a local file
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
         // create the object output stream which will serialize the data
@@ -95,19 +94,19 @@ class EmotionsManager {
         // get the bytes from the ByteArrayOutputStream
         byte bytes[] = bo.toByteArray();
         // return the byte result of the converted string via the Base64 encoding conversion
-        return Base64.encodeToString(bytes,Base64.DEFAULT);
+        return Base64.encodeToString(bytes, Base64.DEFAULT);
     }
 
 
     // Decodes the byte converted emotion into a string when loading out the emotions from the stored entry string
-    private static StoredEmotions fromString(String storedEmotions) throws IOException{
+    private static StoredEmotions fromString(String storedEmotions) throws IOException {
         // create a new byte input stream with Base64 decoding to decode the serialized bites
-        ByteArrayInputStream bi = new ByteArrayInputStream(Base64.decode(storedEmotions,Base64.DEFAULT));
+        ByteArrayInputStream bi = new ByteArrayInputStream(Base64.decode(storedEmotions, Base64.DEFAULT));
         // create a new object input stream to deserialize the data
         ObjectInputStream oi = new ObjectInputStream(bi);
         // try and catch instance to test if the class StoredEmotions exists, if so the class will be read in the object input stream
         try {
-            return (StoredEmotions)oi.readObject();
+            return (StoredEmotions) oi.readObject();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -116,13 +115,13 @@ class EmotionsManager {
 
 
     // saveEmotions will save the emotion entries via the use of shared preferences key and value system
-    void saveEmotions(StoredEmotions se) throws IOException{
+    void saveEmotions(StoredEmotions se) throws IOException {
         // get the shared preferences settings for the Emo file set to private mode via 0
-        SharedPreferences settings=context.getSharedPreferences(Emo,0);
+        SharedPreferences settings = context.getSharedPreferences(Emo, 0);
         //  get an editor from the preference to allow us to edit stored entries in the storedEmotions
-        SharedPreferences.Editor ed =settings.edit();
+        SharedPreferences.Editor ed = settings.edit();
         // put the stored emotions into the key file after converting them to a string
-        ed.putString(emo,toString(se));
+        ed.putString(emo, toString(se));
         // apply the modifications to the shared preferences editor
         ed.apply();
     }

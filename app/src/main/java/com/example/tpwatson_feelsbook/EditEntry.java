@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -46,9 +47,9 @@ public class EditEntry extends AppCompatActivity {
 
         // parse the entry string and remove spaces from it
         String[] parsed = sentry.split(" -- ");
-        parsed[0]=parsed[0].trim();
-        parsed[1]=parsed[1].trim();
-        String [] parsed2=parsed[1].split("\n");
+        parsed[0] = parsed[0].trim();
+        parsed[1] = parsed[1].trim();
+        String[] parsed2 = parsed[1].split("\n");
 
         // set the emotion textview, date, and comment edit texts from the parsed string
         TextView emotionV = findViewById(R.id.Eemotion);
@@ -59,19 +60,19 @@ public class EditEntry extends AppCompatActivity {
         try {
             EditText editComment = findViewById(R.id.Ecomment);
             editComment.setText(parsed2[1]);
-        } catch (RuntimeException r){
+        } catch (RuntimeException r) {
             r.printStackTrace();
         }
-        initial_entry=getEntry();
+        initial_entry = getEntry();
 
     }
 
     // test the date to make sure if the user changes the entries date it follows the proper date format. Returns a boolean object for whether the date is in proper format
-    private static boolean testDate(String date){
+    private static boolean testDate(String date) {
         // establish the date format and make the format non lenient, include a parse catch and try clause
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         format.setLenient(false);
-        try{
+        try {
             format.parse(date.trim());
         } catch (ParseException e) {
             e.printStackTrace();
@@ -81,11 +82,11 @@ public class EditEntry extends AppCompatActivity {
     }
 
     // combines all the elements of the entry into a single string for the new edited entry
-    private String getEntry(){
-        EditText editText= findViewById(R.id.Ecomment);
-        TextView emotion= findViewById(R.id.Eemotion);
-        EditText date=findViewById(R.id.Edate);
-        return emotion.getText().toString()+" -- "+date.getText().toString()+"\n"+editText.getText().toString();
+    private String getEntry() {
+        EditText editText = findViewById(R.id.Ecomment);
+        TextView emotion = findViewById(R.id.Eemotion);
+        EditText date = findViewById(R.id.Edate);
+        return emotion.getText().toString() + " -- " + date.getText().toString() + "\n" + editText.getText().toString();
     }
 
     // intent to return to emotion history window on click of return button on screen, used if user no longer wants to edit entry
@@ -93,23 +94,24 @@ public class EditEntry extends AppCompatActivity {
         EditText editDate = findViewById(R.id.Edate);
 
         // if the date format is correct the curator will be called so the edited entry can be added to the stored emotions
-        if (testDate(editDate.getText().toString())){
+        if (testDate(editDate.getText().toString())) {
             // check if the original entry has been changed before cancelling
-            if(initial_entry.equals(getEntry())){
+            if (initial_entry.equals(getEntry())) {
                 Toast.makeText(this, "Browsing Emotions", Toast.LENGTH_SHORT).show();
                 Curator cu = new Curator();
                 cu.addEmotion(new Emotion((getEntry())));
                 // new intent will bring the user to the browse emotions screen
                 Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
-                startActivity(intent); }
-                // dis
-            else{
+                startActivity(intent);
+            }
+            // dis
+            else {
                 // alert user they have changed the entry and should instead submit it
                 Toast.makeText(this, "Warning. Entry changed, returning will not save changes, please submit entry", Toast.LENGTH_LONG).show();
             }
         }
         // else if the date format is not correct alert the user
-       else{
+        else {
             Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
         }
     }
@@ -120,15 +122,14 @@ public class EditEntry extends AppCompatActivity {
 
 
         // if the date format is correct the curator will be called so the new edited entry can be added to the stored emotions
-        if (testDate(editDate.getText().toString())){
+        if (testDate(editDate.getText().toString())) {
             Curator cu = new Curator();
             Toast.makeText(this, "Entry Successfully Modified", Toast.LENGTH_SHORT).show();
             cu.addEmotion(new Emotion((getEntry())));
             // new intent will bring the user to the browse emotions screen
             Intent intent = new Intent(EditEntry.this, BrowseEmotionsActivity.class);
             startActivity(intent);
-        }
-        else{
+        } else {
             Toast.makeText(this, "Improper Date Format", Toast.LENGTH_LONG).show();
         }
     }

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // declaration of count variables and initiation of their default 0 values
-    private int joyCount,sadCount,angCount,lovCount,feaCount,surCount =0;
+    private int joyCount, sadCount, angCount, lovCount, feaCount, surCount = 0;
 
 
     @Override
@@ -70,30 +70,30 @@ public class MainActivity extends AppCompatActivity {
 
     // get the counts for each emotion and display them
     @SuppressLint("SetTextI18n")
-    private void Counts(){
+    private void Counts() {
         // get the collection of stored emotions via the Curator's list getter methods
-        Collection<Emotion> emotions=  Curator.getStoredEmotions().listEmotions();
+        Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
         // get the entire list of emotions in the form of 1 string and split that string at the commas to separate each entry
-        String test=String.valueOf(emotions);
-        String[] count=test.split(",");
+        String test = String.valueOf(emotions);
+        String[] count = test.split(",");
         // for each of the parsed strings check if the string contains the emotion and if so increment its count
         for (String aCount : count) {
             if (aCount.contains("Joy")) {
                 joyCount++;
             }
-            if (aCount.contains("Sadness")){
+            if (aCount.contains("Sadness")) {
                 sadCount++;
             }
-            if (aCount.contains("Fear")){
+            if (aCount.contains("Fear")) {
                 feaCount++;
             }
-            if (aCount.contains("Love")){
+            if (aCount.contains("Love")) {
                 lovCount++;
             }
-            if (aCount.contains("Surprise")){
+            if (aCount.contains("Surprise")) {
                 surCount++;
             }
-            if (aCount.contains("Anger")){
+            if (aCount.contains("Anger")) {
                 angCount++;
             }
         }
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // newEntry will bring the user to the edit entry activity on any button click, passing the emotion designated with each different emotion button
-    public void newEntry (View view) {
+    public void newEntry(View view) {
         // Switch case scenario which differentiates based on view IDs as to which button was clicked to properly initiate click sequence
         Toast.makeText(this, "New Entry", Toast.LENGTH_SHORT).show();
         switch (view.getId()) {
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 // the clicking of this button creates a new intent which takes the user to the emotion entry activity
                 Intent intent = new Intent(MainActivity.this, EmotionEntry.class);
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
-                intent.putExtra("emotion","Joy");
+                intent.putExtra("emotion", "Joy");
                 // start the activity
                 startActivity(intent);
                 // break from the case so the sequence does not continue onto other cases
@@ -146,31 +146,31 @@ public class MainActivity extends AppCompatActivity {
             // each case will perform almost identical methods but will differ in their count IDs & values and the exported message
             case R.id.sadnessbutton:
                 Intent intent1 = new Intent(MainActivity.this, EmotionEntry.class);
-                intent1.putExtra("emotion","Sadness");
+                intent1.putExtra("emotion", "Sadness");
                 startActivity(intent1);
                 break;
 
             case R.id.lovebutton:
                 Intent intent2 = new Intent(MainActivity.this, EmotionEntry.class);
-                intent2.putExtra("emotion","Love");
+                intent2.putExtra("emotion", "Love");
                 startActivity(intent2);
                 break;
 
             case R.id.angerbutton:
                 Intent intent3 = new Intent(MainActivity.this, EmotionEntry.class);
-                intent3.putExtra("emotion","Anger");
+                intent3.putExtra("emotion", "Anger");
                 startActivity(intent3);
                 break;
 
             case R.id.surprisebutton:
                 Intent intent4 = new Intent(MainActivity.this, EmotionEntry.class);
-                intent4.putExtra("emotion","Surprise");
+                intent4.putExtra("emotion", "Surprise");
                 startActivity(intent4);
                 break;
 
             case R.id.fearbutton:
                 Intent intent5 = new Intent(MainActivity.this, EmotionEntry.class);
-                intent5.putExtra("emotion","Fear");
+                intent5.putExtra("emotion", "Fear");
                 startActivity(intent5);
                 break;
         }

@@ -49,13 +49,13 @@ public class EmotionEntry extends AppCompatActivity {
         EmotionsManager.Initialize(this.getApplicationContext());
 
         // get emotion passed from the MainActivity
-        Intent intent= getIntent();
-        String emotion=intent.getStringExtra("emotion");
+        Intent intent = getIntent();
+        String emotion = intent.getStringExtra("emotion");
 
         // set the Edittext and TextViews to the appropriate layout objects via the findViewId method
         TextView tv = findViewById(R.id.current_emotion);
-        EditText editText= findViewById(R.id.optional_comment);
-        TextView edate=findViewById(R.id.datetime);
+        EditText editText = findViewById(R.id.optional_comment);
+        TextView edate = findViewById(R.id.datetime);
 
         // set the textView's character sequence to the value passed into the activity
         tv.setText(emotion);
@@ -63,30 +63,30 @@ public class EmotionEntry extends AppCompatActivity {
         // create a new datetime object with the specified assignment format and set the date objects text
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
-        String strdate=dateFormat.format(date);
+        String strdate = dateFormat.format(date);
         edate.setText(strdate);
         // merge the emotion, date, and comment into a single entry which will later be user to compare changes
-        initial_entry=tv.getText().toString()+" -- "+edate.getText().toString()+"\n"+editText.getText().toString();
+        initial_entry = tv.getText().toString() + " -- " + edate.getText().toString() + "\n" + editText.getText().toString();
 
         // add new emotion after 1 click
-        e=new Emotion(initial_entry);
-        Curator cu= new Curator();
+        e = new Emotion(initial_entry);
+        Curator cu = new Curator();
         cu.addEmotion(e);
     }
 
     // getEntry merges all the elements of an entry on the screen and returns it as a string
-    private String getEntry(){
+    private String getEntry() {
         // get all the variables by their id's and merge these into a single string that will serve as the entry format
-        EditText editText= findViewById(R.id.optional_comment);
-        TextView emotion= findViewById(R.id.current_emotion);
-        TextView date=findViewById(R.id.datetime);
+        EditText editText = findViewById(R.id.optional_comment);
+        TextView emotion = findViewById(R.id.current_emotion);
+        TextView date = findViewById(R.id.datetime);
         // return the merged string
-        return emotion.getText().toString()+" -- "+date.getText().toString()+"\n"+editText.getText().toString();
+        return emotion.getText().toString() + " -- " + date.getText().toString() + "\n" + editText.getText().toString();
     }
 
     // submit will submit and save the entry then return the user to the home screen
-    public void Submit(View view){
-        Toast.makeText(this,"Adding Entry", Toast.LENGTH_SHORT).show();
+    public void Submit(View view) {
+        Toast.makeText(this, "Adding Entry", Toast.LENGTH_SHORT).show();
         // Call the curator and establish an object of reference
         Curator cu = new Curator();
         // remove the emotion we added and add a new one with a possible comment a few lines down
@@ -101,12 +101,12 @@ public class EmotionEntry extends AppCompatActivity {
     }
 
     // cancel the entry and return home
-    public void Home(View view){
+    public void Home(View view) {
         // check if the initial entry has been modified
-        if (!initial_entry.equals(getEntry())){
+        if (!initial_entry.equals(getEntry())) {
             // create an alert dialog to alert user changes have been made and allow them to either cancel entry or return to entry screen
             AlertDialog.Builder ab = new AlertDialog.Builder(EmotionEntry.this);
-            ab.setMessage("Warning. Changes have been made to the entry."+"\n"+"Returning to the main screen will not save changes.");
+            ab.setMessage("Warning. Changes have been made to the entry." + "\n" + "Returning to the main screen will not save changes.");
             ab.setCancelable(true);
             // Set a button to return to the MainActivity and don't save changes
             ab.setNeutralButton("Cancel Entry", new DialogInterface.OnClickListener() {
@@ -131,8 +131,8 @@ public class EmotionEntry extends AppCompatActivity {
         }
 
         // if the initial entry has not been changed the user will be returned to MainActivity via a new intent
-        else{
-            Toast.makeText(this,"Returning Home", Toast.LENGTH_SHORT).show();
+        else {
+            Toast.makeText(this, "Returning Home", Toast.LENGTH_SHORT).show();
             // remove the emotion we added in on create
             Curator.getStoredEmotions().removeEmotion(e);
             Intent intent = new Intent(EmotionEntry.this, MainActivity.class);

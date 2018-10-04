@@ -55,7 +55,7 @@ class Curator {
     }
 
     // add a new emotion
-    void addEmotion(Emotion emotion){
+    void addEmotion(Emotion emotion) {
         // Get the stored emotions and add the emotion passed in the parameter
         getStoredEmotions().addEmotion(emotion);
     }
