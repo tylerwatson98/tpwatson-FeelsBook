@@ -39,8 +39,7 @@ public class BrowseEmotionsActivity extends AppCompatActivity {
         EmotionsManager.Initialize(this.getApplicationContext());
         // Get the list view variable via its ID and assign it to an object
         ListView listView = findViewById(R.id.emotion_list);
-        // Get the stored list of users emotions entered via calls to curator methods
-
+        // Get the stored list of users emotions entered via calls to curator methods so that the listview can be populated by emotions
         final Collection<Emotion> emotions = Curator.getStoredEmotions().listEmotions();
         // Create new array list initialized by the emotions collection object. Final indicates el variable is shared and wont be re-assigned
         final ArrayList<Emotion> el = new ArrayList<>(emotions);
