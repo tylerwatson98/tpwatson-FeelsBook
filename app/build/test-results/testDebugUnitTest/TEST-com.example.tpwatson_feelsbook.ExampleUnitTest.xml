@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.tpwatson_feelsbook.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-04T18:13:52" hostname="DESKTOP-Q65BDLM" time="0.005">
+  <properties/>
+  <testcase name="addition_isCorrect" classname="com.example.tpwatson_feelsbook.ExampleUnitTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
