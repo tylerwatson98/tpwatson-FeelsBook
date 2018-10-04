@@ -2,7 +2,7 @@
 /*
  The curator class helps to perform tasks associated with adding and saving the emotions. It reduces the code in separate classes as an attempt to increase
  cohesion. The curator utilizes methods found in the StoredEmotions class via the creation of an instance of the StoredEmotions in this class. Via getStoredEmotions
- emotions can be loaded and updated as well as be saved.
+ emotions can be loaded and updated as well as be saved to the StoredEmotions
 
  Idea for Curator implementations from *Abram Hindle, CMPUT 301: Saga of Student Picker, https://www.youtube.com/playlist?list=PL240uJOh_Vb4PtMZ0f7N8ACYkCLv0673O, 2014/09/14, viewed 2018/09/15*
  */
