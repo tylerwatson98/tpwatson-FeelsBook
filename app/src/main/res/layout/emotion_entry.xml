@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
         android:id="@+id/submit_entry_button"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="Submit"
         android:text="@string/submit_entry"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
 
     <EditText
         android:id="@+id/optional_comment"
@@ -30,15 +33,16 @@
         app:layout_constraintBottom_toTopOf="@+id/submit_entry_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/current_emotion"
-        android:layout_width="272dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text=""
         android:textAlignment="center"
         android:textSize="30sp"
@@ -60,12 +64,15 @@
         app:layout_constraintTop_toBottomOf="@+id/current_emotion" />
 
     <Button
-        android:layout_width="155dp"
+        android:id="@+id/button3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/return_home"
+        android:layout_marginEnd="32dp"
         android:onClick="Home"
+        android:text="@string/return_home"
         app:layout_constraintBaseline_toBaselineOf="@+id/submit_entry_button"
+        app:layout_constraintEnd_toStartOf="@+id/submit_entry_button"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

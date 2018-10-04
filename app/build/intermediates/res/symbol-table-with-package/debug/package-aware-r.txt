@@ -684,6 +684,9 @@ id beginning
 id blocking
 id bottom
 id browsebutton
+id button
+id button2
+id button3
 id buttonPanel
 id center
 id center_horizontal
@@ -918,6 +921,8 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string commenthint
+string datehint
 string edit_entry
 string menu
 string optional_comment_max_100_char

@@ -2,37 +2,88 @@
 <instant-run
     abi="x86"
     api-level="26"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="420dpi"
     format="10"
     plugin-version="3.2.0"
-    timestamp="1538610593747"
+    timestamp="1538632998767"
     token="692737687033305861"
-    verifier="COMPATIBLE" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="1113" />
+        duration="6217" />
     <task
         name="instant-run-dex"
-        duration="147" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="324" />
+        duration="84" />
     <task
         name="verifier"
-        duration="22" />
+        duration="156" />
 
     <artifact
-        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1538609371293"
+        timestamp="1538632467979"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -41,31 +92,7 @@
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -73,19 +100,38 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1538610563015"
-        verifier="METHOD_ADDED" >
+        timestamp="1538632998767"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1538610593747"
-        verifier="COMPATIBLE" >
         <artifact
-            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
