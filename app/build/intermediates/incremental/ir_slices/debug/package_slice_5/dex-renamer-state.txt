@@ -1,4 +1,4 @@
-#Thu Oct 04 17:02:25 MDT 2018
+#Thu Oct 04 18:22:06 MDT 2018
 base.0=C\:\\Users\\tyler\\AndroidStudioProjects\\tpwatsonFeelsBook2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex
