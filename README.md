@@ -1,6 +1,7 @@
 The Feels book application allows a user to record the emotion they are currently feeling. It will automatically provde a datetime but the user has the ability to write an optional comment ot go with the meotion they are feeling.
 The user can see the counts of how many times they have recorded an emotion from the counts on the main screen. They can also check the history of their emotions in the browse emotions screen. These emotion entries are sorted in ascending order and clicking on an emotion entry will give the user the option to either delete or change the entry.
 For editing entries the user is able to change both the entry date and the comment but the emotion cannot be changed.
+The video for this app can be found at https://youtu.be/UKs4sTOd8LA. The colours of some of the buttons have been changed.
 
 I used knowledge and ideas from several sources when creating this application, they are listed below.
 
