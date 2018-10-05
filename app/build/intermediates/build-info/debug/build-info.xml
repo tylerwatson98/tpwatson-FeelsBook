@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.2.0"
-    timestamp="1538760601358"
+    timestamp="1538762834244"
     token="692737687033305861"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1538760601358"
+        timestamp="1538762834244"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\tyler\AndroidStudioProjects\tpwatsonFeelsBook2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
